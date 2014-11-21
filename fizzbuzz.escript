@@ -1,6 +1,11 @@
 #!/usr/bin/env escript
 %% -*- erlang -*-
 %%! -smp enable -sname fizzbuzz
+%%%
+%%% Usage
+%%%
+%%%    ./fizzbuzz.escript 10 324 40 0 20 3 4 5 112 15 18
+%%%
 main(Numbers) ->
   Results = [fizzbuzz(erlang:list_to_integer(N)) || N <- Numbers],
   io:fwrite(string:join(Results, ", ") ++ "~n").
